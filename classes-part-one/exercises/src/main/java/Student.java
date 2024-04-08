@@ -32,7 +32,7 @@ public class Student {
         {
                 this.studentId = newID;
         }
-        private void setNumberOfCredits(int numCredits)
+        protected void setNumberOfCredits(int numCredits)
         {
                 this.numberOfCredits = numCredits;
         }
