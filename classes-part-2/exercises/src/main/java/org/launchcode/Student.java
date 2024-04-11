@@ -1,5 +1,7 @@
 package org.launchcode;
 
+import java.util.Objects;
+
 public class Student {
 
     private static int nextStudentId = 1;
@@ -101,6 +103,21 @@ public class Student {
 
     private void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
+    }
+
+    //@Override
+    public boolean equals(Student aStudent)
+    {
+        return studentId == aStudent.studentId && numberOfCredits == aStudent.numberOfCredits &&
+                Double.compare(gpa, aStudent.gpa) == 0 && Objects.equals(name, aStudent.name);
+    }
+
+    public String toString(Student aStudent)
+    {
+        String result = aStudent.name + " is a " + aStudent.getGradeLevel() + " with " +
+                aStudent.getNumberOfCredits() + " credits and a GPA of " + this.getGpa();
+
+        return result;
     }
 
     public static void main(String[] args) {
