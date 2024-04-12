@@ -31,7 +31,12 @@ public class Menu {
 
     public void addItems(MenuItem anItem)
     {
-        this.items.add(anItem);
+        if (this.getItems().contains(anItem))
+        {
+            System.out.println("Error: Item already exists.");
+        }
+        else
+            this.items.add(anItem);
     }
 
     public void removeItems(MenuItem anItem)
