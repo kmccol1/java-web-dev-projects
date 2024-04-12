@@ -1,5 +1,7 @@
 package org.launchcode;
 
+import java.util.Objects;
+
 public class MenuItem {
     private double price;
     private String description;
@@ -27,6 +29,29 @@ public class MenuItem {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public boolean getIsNew() {
+        return isNew;
+    }
+
+    public boolean equals(MenuItem anItem)
+    {
+        return this.price == anItem.price &&
+                this.getCategory().equals(anItem.getCategory()) &&
+                this.getDescription().equals(anItem.getDescription());
     }
 }
 

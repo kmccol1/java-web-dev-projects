@@ -2,6 +2,7 @@ package org.launchcode;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 public class Menu {
     private Date lastUpdated;
@@ -26,6 +27,42 @@ public class Menu {
 
     public ArrayList<MenuItem> getItems() {
         return items;
+    }
+
+    public void addItems(MenuItem anItem)
+    {
+        this.items.add(anItem);
+    }
+
+    public void removeItems(MenuItem anItem)
+    {
+        this.items.remove(anItem);
+    }
+
+    public boolean isNew(MenuItem anItem)
+    {
+        return this.items.get(this.items.indexOf(anItem)).getIsNew();
+    }
+
+    public void printItem(MenuItem anItem)
+    {
+        System.out.println("Price: " + anItem.getPrice() +
+                "\nDescription: " +
+                anItem.getDescription() +
+                "\nCategory: " + anItem.getCategory());
+    }
+
+    public void printMenu()
+    {
+        System.out.println("Printing the ENTIRE menu...");
+        for (MenuItem anItem : items)
+        {
+            System.out.println("Price: " + anItem.getPrice() +
+                    "\nDescription: " +
+                    anItem.getDescription() +
+                    "\nCategory: " + anItem.getCategory());
+        }
+        System.out.println("Done.");
     }
 }
 
