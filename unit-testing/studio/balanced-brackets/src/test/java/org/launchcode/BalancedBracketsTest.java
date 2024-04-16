@@ -66,5 +66,25 @@ class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]]"));
     }
 
+    @Test
+    public void nestedUnbalancedSquareBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[Hello], [World]"));
+    }
+
+    @Test
+    public void multipleBalancedSquareBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Hello], [World], [Encrypted]"));
+    }
+
+    @Test
+    public void mixedCharsUnbalancedBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Hello, [W]orld!, [E]ncr[yp]ted]"));
+    }
+
+    @Test
+    public void mixedCharsBalancedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("Hello, [W]orld!, [E]ncr[yp]ted"));
+    }
+
 
 }
