@@ -56,5 +56,15 @@ class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
     }
 
+    @Test
+    public void twoLeftBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[["));
+    }
+
+    @Test
+    public void twoRightBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]]"));
+    }
+
 
 }

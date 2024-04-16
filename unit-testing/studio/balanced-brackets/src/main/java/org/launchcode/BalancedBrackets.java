@@ -26,10 +26,16 @@ public class BalancedBrackets {
             if (ch == '[') {
                 leftBrackets++;
             } else if (ch == ']') {
+
                 rightBrackets++;
-                if (leftBrackets < 1 && str.length() <= 2)
-                    rightBrackets--;
+//                if (leftBrackets < 1 && str.length() <= 1 && rightBrackets < 1)
+//                    rightBrackets--;
+//                else if (rightBrackets <= 1)
+//                    rightBrackets++;
+
             }
+            if (leftBrackets - rightBrackets < 0)
+                return leftBrackets - rightBrackets == 0;
         }
 //        return brackets == 0;
         return leftBrackets == rightBrackets;
