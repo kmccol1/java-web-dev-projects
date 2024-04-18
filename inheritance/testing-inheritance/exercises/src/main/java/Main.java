@@ -6,10 +6,10 @@ public class Main
         garfield.eat();
         System.out.println(garfield.isTired());   // prints true
 
-        Cat plainCat = new Cat(8.6);
+        //Cat plainCat = new Cat(8.6);
         HouseCat cheshireCat = new HouseCat("Cheshire", 12);
 
-        System.out.println("Plain cat noise: " + plainCat.noise()); // prints "Meeeeeeooooowww!"
+        //System.out.println("Plain cat noise: " + plainCat.noise()); // prints "Meeeeeeooooowww!"
         System.out.println("Cheshire cat noise: " + cheshireCat.noise()); // prints "Hello, my name is Cheshire!"
 
         HouseCat mittens = new HouseCat(8.4);
