@@ -11,6 +11,10 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+    public HouseCat(double aWeight) {
+        super(aWeight);
+    }
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }
