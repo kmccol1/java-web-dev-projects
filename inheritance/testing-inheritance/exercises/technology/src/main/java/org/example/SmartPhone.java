@@ -10,8 +10,22 @@ public class SmartPhone extends Computer
         this.storageSize = size;
     }
 
-    public void swipe()
+    public SmartPhone()
     {
-        System.out.println("Swiped once.");
+        super();
+        this.storageSize = 0;
+    }
+
+    public String swipe()
+    {
+        return "Swiped once.";
+    }
+
+    public double getStorageSize() {
+        return storageSize;
+    }
+
+    public void setStorageSize(double storageSize) {
+        this.storageSize = storageSize;
     }
 }

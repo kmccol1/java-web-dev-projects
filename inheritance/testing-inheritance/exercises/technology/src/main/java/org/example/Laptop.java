@@ -1,6 +1,6 @@
 package org.example;
 
-public class Laptop
+public class Laptop extends Computer
 {
     private double displaySize;
 
@@ -10,9 +10,21 @@ public class Laptop
         this.displaySize = size;
     }
 
+    public Laptop()
+    {
+        this.displaySize = 0;
+    }
+
     public void type()
     {
         System.out.println("asdfgdgfdfjlkg");
     }
 
+    public double getDisplaySize() {
+        return displaySize;
+    }
+
+    public void setDisplaySize(double displaySize) {
+        this.displaySize = displaySize;
+    }
 }
