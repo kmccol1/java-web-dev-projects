@@ -2,11 +2,13 @@ package org.launchcode;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class ArrayListGradebook {
     public static void main(String[] args) {
         ArrayList<String> students = new ArrayList<>();
         ArrayList<Double> grades = new ArrayList<>();
+        ArrayList<String> planets = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
@@ -40,5 +42,20 @@ public class ArrayListGradebook {
 
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
+
+        planets.add("Mercury");
+        planets.add("Venus");
+        planets.add("Earth");
+        planets.add("Mars");
+        planets.add("Jupiter");
+        planets.add("Saturn");
+        planets.add("Uranus");
+        planets.add("Neptune");
+
+        String[] planetsArray = new String[planets.size()];
+        planets.toArray(planetsArray);
+
+        System.out.println("Planets:" + planets);
+
     }
 }
