@@ -15,9 +15,28 @@ public class Main {
         // Test out your CheckFileExtension() function!
     }
 
-    public static void Divide(int x, int y)
+    public static double Divide(int x, int y)
     {
         // Write code here!
+        double result = -1;
+
+        if (y == 0)
+        {
+            throw new ArithmeticException("Exception thrown");
+        }
+        else
+        {
+            try
+            {
+                result = x / y;
+            }
+            catch(ArithmeticException errorStr)
+            {
+                System.out.println("Exception caught!");
+            }
+        }
+
+        return result;
     }
 
     public static int CheckFileExtension(String fileName)
