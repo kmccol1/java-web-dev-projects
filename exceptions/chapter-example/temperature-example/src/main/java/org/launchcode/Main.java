@@ -14,6 +14,14 @@ public class Main {
         input.close();
 
         Temperature currentTemp = new Temperature();
-        currentTemp.setFahrenheit(fahrenheit);
+        try
+        {
+            currentTemp.setFahrenheit(fahrenheit);
+        }
+        catch(Exception e)
+        {
+            System.out.println("Temperature exception caught!");
+        }
+
     }
 }
