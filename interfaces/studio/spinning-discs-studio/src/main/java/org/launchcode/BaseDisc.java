@@ -1,6 +1,6 @@
 package org.launchcode;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public abstract class BaseDisc
 {
@@ -9,10 +9,10 @@ public abstract class BaseDisc
     private String genre;
     private double storageCapacity;
     private String producerName;
-    private Date releaseDate;
+    private LocalDateTime releaseDate;
     private String formatType;
 
-    public BaseDisc(String title, double duration, String genre, double storageCapacity, String producerName, Date releaseDate, String formatType)
+    public BaseDisc(String title, double duration, String genre, double storageCapacity, String producerName, LocalDateTime releaseDate, String formatType)
     {
         this.title = title;
         this.duration = duration;
@@ -63,11 +63,11 @@ public abstract class BaseDisc
         this.producerName = producerName;
     }
 
-    public Date getReleaseDate() {
+    public LocalDateTime getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(LocalDateTime releaseDate) {
         this.releaseDate = releaseDate;
     }
 
